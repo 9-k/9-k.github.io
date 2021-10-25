@@ -10,3 +10,7 @@
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	5.9.0	/af305127/
 body	css/style.css	/^body {$/;"	s
+body > main > .icons i	css/style.css	/^body > main > .icons i {$/;"	s
+body > main > .title	css/style.css	/^body > main > .title {$/;"	c
+html	css/style.css	/^html {$/;"	s
+main	css/style.css	/^main {$/;"	s

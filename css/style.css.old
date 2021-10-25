@@ -1,0 +1,28 @@
+
+html {
+	min-height: 100%; 
+	display: flex;
+	flex-direction: column;
+	font-family: 'Iosevka';
+	height: 100%;
+}
+
+body {
+	flex-grow: 1;
+	justify-content: center;
+	/*padding: 0 30px; */
+	text-align: center;
+	background: #5cdb95;
+	color: #edf5e1;
+	height: 100%;
+}
+
+main {
+	align-items: center;
+	height: 100%;
+}
+
+body > main > .title {
+	font-size: 3.75em;
+	font-weight: 600;
+}

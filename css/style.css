@@ -1,10 +1,32 @@
+
+html {
+	height: 100%; 
+	font-family: 'Iosevka';
+	overflow-y: hidden;
+}
+
 body {
-	display: flex;
-	flex-direction: column;
-	min-height: 80vh; 
-	justify-content: center;
-	padding: 0 30px;
-	text-align: center;
 	background: #FFEB3B;
 	color: #1E1E1E;
 }
+
+main {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	justify-content: center;
+	padding: 0 30px;
+	text-align: center;
+}
+
+body > main > .title {
+	font-size: 3.75em;
+	font-weight: 600;
+}
+
+body > main > .icons i {
+	font-size: 3em;
+	color: #1E1E1E;
+	padding: 10px;
+}
+
