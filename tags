@@ -9,8 +9,25 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	5.9.0	/af305127/
+*	css/reset.css	/^*, *:before, *:after {$/;"	s
+*:after	css/reset.css	/^*, *:before, *:after {$/;"	s
+*:before	css/reset.css	/^*, *:before, *:after {$/;"	s
+body	css/reset.css	/^body, h1, h2, h3, h4, h5, h6, p, ol, ul {$/;"	s
 body	css/style.css	/^body {$/;"	s
 body > main > .icons i	css/style.css	/^body > main > .icons i {$/;"	s
 body > main > .title	css/style.css	/^body > main > .title {$/;"	c
+h1	css/reset.css	/^body, h1, h2, h3, h4, h5, h6, p, ol, ul {$/;"	s
+h2	css/reset.css	/^body, h1, h2, h3, h4, h5, h6, p, ol, ul {$/;"	s
+h3	css/reset.css	/^body, h1, h2, h3, h4, h5, h6, p, ol, ul {$/;"	s
+h4	css/reset.css	/^body, h1, h2, h3, h4, h5, h6, p, ol, ul {$/;"	s
+h5	css/reset.css	/^body, h1, h2, h3, h4, h5, h6, p, ol, ul {$/;"	s
+h6	css/reset.css	/^body, h1, h2, h3, h4, h5, h6, p, ol, ul {$/;"	s
+html	css/reset.css	/^html {$/;"	s
 html	css/style.css	/^html {$/;"	s
+img	css/reset.css	/^img {$/;"	s
 main	css/style.css	/^main {$/;"	s
+ol	css/reset.css	/^body, h1, h2, h3, h4, h5, h6, p, ol, ul {$/;"	s
+ol	css/reset.css	/^ol, ul {$/;"	s
+p	css/reset.css	/^body, h1, h2, h3, h4, h5, h6, p, ol, ul {$/;"	s
+ul	css/reset.css	/^body, h1, h2, h3, h4, h5, h6, p, ol, ul {$/;"	s
+ul	css/reset.css	/^ol, ul {$/;"	s
