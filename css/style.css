@@ -3,13 +3,12 @@ html {
 	height: 100%; 
 	font-family: 'Iosevka';
 	overflow-y: hidden;
+	overflow-x: hidden;
 }
 
 body {
-	background: #324427;
-	color: #efd1a8;
-	min-width: 320px;
-	width: 100%;
+	background: #283e0b;
+	color: #ffae35;
 }
 
 main {
@@ -28,7 +27,7 @@ body > main > .title {
 
 body > main > .icons i {
 	font-size: 3.5em;
-	color: #efd1a8;
+	color: #ffae35;
 	padding: 10px;
 }
 
