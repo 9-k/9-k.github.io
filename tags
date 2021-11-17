@@ -9,8 +9,38 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	5.9.0	/af305127/
+Appendix	presentations/2021/superconductivity/sample.tex	/^	\\section{Appendix}$/;"	s
+BCS Theory	presentations/2021/superconductivity/sample.tex	/^	\\section{BCS Theory}$/;"	s
+Classical Analogy	presentations/2021/superconductivity/sample.tex	/^			\\frametitle{Classical Analogy}$/;"	f
+Conclusions	presentations/2021/superconductivity/sample.tex	/^			\\frametitle{Conclusions}$/;"	f
+Conclusions	presentations/2021/superconductivity/sample.tex	/^		\\section{Conclusions}$/;"	s
+Contents	presentations/2021/superconductivity/sample.tex	/^		\\frametitle{Contents}$/;"	f
+Ginzburg-Landau Theory	presentations/2021/superconductivity/sample.tex	/^	    \\frametitle{Ginzburg-Landau Theory}$/;"	f
+Hints to BCS Theory	presentations/2021/superconductivity/sample.tex	/^			\\frametitle{Hints to BCS Theory}$/;"	f
+History I	presentations/2021/superconductivity/sample.tex	/^			\\frametitle{History I}$/;"	f
+History II	presentations/2021/superconductivity/sample.tex	/^			\\frametitle{History II}$/;"	f
+Introduction	presentations/2021/superconductivity/sample.tex	/^	\\section{Introduction}$/;"	s
+London Equations	presentations/2021/superconductivity/sample.tex	/^			\\frametitle{London Equations}$/;"	f
+Method of Solution	presentations/2021/superconductivity/sample.tex	/^			\\frametitle{Method of Solution}$/;"	f
+Postulates of BCS Theory	presentations/2021/superconductivity/sample.tex	/^			\\frametitle{Postulates of BCS Theory}$/;"	f
+References	presentations/2021/superconductivity/sample.tex	/^		\\frametitle{References} \\tiny$/;"	f
+References	presentations/2021/superconductivity/sample.tex	/^	\\section{References}$/;"	s
+The Authors	presentations/2021/superconductivity/sample.tex	/^			\\frametitle{The Authors}$/;"	f
+Theory	presentations/2021/superconductivity/sample.tex	/^			\\frametitle{Theory}$/;"	f
+Type-I/Type-II?	presentations/2021/superconductivity/sample.tex	/^			\\frametitle{Type-I\/Type-II?}$/;"	f
+Vortices?	presentations/2021/superconductivity/sample.tex	/^			\\frametitle{Vortices?}$/;"	f
+What is Superconductivity?	presentations/2021/superconductivity/sample.tex	/^			\\frametitle{What is Superconductivity?}$/;"	f
 body	css/style.css	/^body {$/;"	s
 body > main > .icons i	css/style.css	/^body > main > .icons i {$/;"	s
 body > main > .title	css/style.css	/^body > main > .title {$/;"	c
+fig:bardeen	presentations/2021/superconductivity/sample.tex	/^					\\label{fig:bardeen}$/;"	l
+fig:cooper	presentations/2021/superconductivity/sample.tex	/^					\\label{fig:cooper}$/;"	l
+fig:expulsion	presentations/2021/superconductivity/sample.tex	/^					\\label{fig:expulsion}$/;"	l
+fig:kamerlinghonnessigned	presentations/2021/superconductivity/sample.tex	/^					\\label{fig:kamerlinghonnessigned}$/;"	l
+fig:schriffer	presentations/2021/superconductivity/sample.tex	/^					\\label{fig:schriffer}$/;"	l
+fig:specifictempagreement	presentations/2021/superconductivity/sample.tex	/^					\\label{fig:specifictempagreement}$/;"	l
+fig:svort	presentations/2021/superconductivity/sample.tex	/^				\\label{fig:svort}$/;"	l
+fig:t1resistivity	presentations/2021/superconductivity/sample.tex	/^					\\label{fig:t1resistivity}$/;"	l
+fig:types	presentations/2021/superconductivity/sample.tex	/^					\\label{fig:types}$/;"	l
 html	css/style.css	/^html {$/;"	s
 main	css/style.css	/^main {$/;"	s

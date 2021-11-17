@@ -1,0 +1,257 @@
+%!TEX program = xelatex
+\documentclass{beamer}
+
+
+%PACKAGE IMPORTS
+\usepackage{amsmath, amsbsy, amssymb, amsthm, graphicx, multicol, animate, mathtools, xcolor, caption}
+\usepackage[mathrm=sym]{unicode-math} 
+% this fixed the math fonts being wrong using xelatex
+
+% PRESENTATION SETUP
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\captionsetup{justification=centering, labelformat = empty, font=footnotesize}
+\usetheme{Execushares}
+
+
+\title{How e\hspace{-1.5pt}lectrons attract:\\\vspace{3pt}BCS Theory}
+\subtitle{The subject of the 1972 Nobel Prize in Physics}
+\author{Ian Schreiber}
+\date{\today}
+
+\setcounter{showSlideNumbers}{1}
+
+
+\begin{document}
+	\setcounter{showProgressBar}{0}
+	\setcounter{showSlideNumbers}{0}
+	\frame{\titlepage}
+
+	\begin{frame}
+		\frametitle{Contents}
+		\tableofcontents
+	\end{frame}
+
+	\setcounter{framenumber}{0}
+	\setcounter{showProgressBar}{1}
+	\setcounter{showSlideNumbers}{1}
+	\section{Introduction}
+		\begin{frame}
+			\frametitle{What is Superconductivity?}
+			\begin{multicols}{2}
+				\begin{figure}
+					\centering
+					\includegraphics[width=0.9\linewidth]{images/t1resistivity}
+					\caption{Type-I $ \rho $ vs. $ T $ \\ \tiny \textcolor{gray}{Source: Saylor Academy, \textit{General Chemistry.}}}
+					\label{fig:t1resistivity}
+				\end{figure}
+				\columnbreak
+				\begin{figure}
+					\centering
+					\includegraphics[width=0.9\linewidth]{images/EXPULSION}
+					\caption{Type-I Meissner Effect. \\ \tiny \textcolor{gray}{Source: Schwalbe at Wikimedia Commons.} }
+					\label{fig:expulsion}
+				\end{figure}
+			\end{multicols}
+			
+			%A macroscopic quantum phenomenon wherein electrical resistivity vanishes and magnetic fields are expelled from certain materials below a critical temperature. The rate at which resistivity vanishes and how the magnetic fields are expelled classify superconductors into two types: Type 1 and Type 2.
+		\end{frame}
+		\begin{frame}
+			\frametitle{History I}
+			\begin{multicols}{2}
+				\begin{itemize}
+					\item Discovered 1911 by Heike Kamerlingh Onnes
+					\item Utilized liquefied helium as a refrigerant
+					\item Discovered mercury's critical temperature of 4.2K
+				\end{itemize}
+				\columnbreak
+				\begin{figure}
+					\centering
+					\includegraphics[width=0.8\linewidth]{images/Kamerlingh_Onnes_signed}
+					\caption{Heike Kamerlingh Onnes \\ \tiny \textcolor{gray}{Source: Nobel Foundation}}
+					\label{fig:kamerlinghonnessigned}
+				\end{figure}
+			\end{multicols}
+		\end{frame}
+		\begin{frame}
+			\frametitle{History II}
+			\begin{itemize}
+				\item 1933: Meissner effect discovered \cite{e_brit}
+				\item 1935: Type-II superconductors discovered, not identified \cite{RJABININ1935}
+				\item 1935: London equations published (phenomenological) \cite{london}
+				\item 1950: Ginzburg-Landau theory published (phenomenological) \cite{ginz_land}
+				\item 1957: BCS theory published. %First sucessful microscopic theory of superconductivity.
+			\end{itemize}
+		\end{frame}
+	
+	\section{BCS Theory}
+		\begin{frame}
+			\frametitle{The Authors}
+			\begin{multicols}{3}
+				\begin{figure}
+					\centering
+					\includegraphics[width=\linewidth]{images/Bardeen}
+					\caption[]{John Bardeen}
+					\label{fig:bardeen}
+				\end{figure}
+			\columnbreak	
+				\begin{figure}
+					\centering
+					\includegraphics[width=\linewidth]{images/cooper}
+					\caption[]{Leon Neil Cooper}
+					\label{fig:cooper}
+				\end{figure}
+			\columnbreak
+				\begin{figure}
+					\centering
+					\includegraphics[width=\linewidth]{images/schriffer}
+					\caption[]{John Robert Schrieffer}
+					\label{fig:schriffer}
+				\end{figure}
+			\end{multicols}
+		\tiny \textcolor{gray}{Source: Nobel Foundation}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Hints to BCS Theory}
+			\begin{enumerate}
+				\item Isotope effect: $T_{c} \sqrt{M} = \text{const.} $
+				%suggests that the lattice and thus phonons are involved
+				\item London "rigid wavefunction"
+				% wavefunction doesn't change upon application of magnetic field... some long-scale coherence 
+				\item Meissner effect
+				% reinforces "rigidity" point
+				\item Band gap at Fermi energy
+				%implies electrons are bound to something at low temperatures...
+			\end{enumerate}
+		\centering But how does it all work?
+		\end{frame}
+		\begin{frame}
+			\frametitle{Postulates of BCS Theory}
+			\begin{itemize}
+				\item Isotropy
+				\item Phonons decoupled from electrons
+				\item Bloch individual-particle model + Screened Coulomb + Phonon $ H $ augmentations
+				%each electron behaves like a bloch wave, and does not interact with other electrons except in the two-body case with screened coulomb interactions and phonon interactions.
+			\end{itemize}
+		\end{frame}
+		\begin{frame}
+			\frametitle{Theory}
+			\begin{align*}
+				H &= \sum_{k > k_{F}} \epsilon_{k}n_{k \sigma} \\
+				&+ \sum_{k < k_{F}}|\epsilon_{k}|(1-n_{k\sigma})\\
+				%these terms are just kinetic energy terms
+				&+ H_{Coul}	\\
+				%screened coulomb interaction
+				&+ \underbrace{\frac{1}{2}\sum_{k, k', \sigma, \sigma', \vec{\kappa}} \frac{2 \hbar \omega_{\kappa}|M_{\kappa}|^2c^{*}(\vec{k}'-\vec{\kappa},\sigma')c(\vec{k}',\sigma')c^{*}(\vec{k}+\vec{\kappa},\sigma)c(\vec{k},\sigma)}{(\epsilon_{k}-\epsilon_{k+\kappa})^2-(\hbar \omega_{\kappa})^2}}_{\text{electron-phonon interaction}}
+			\end{align*}
+		\end{frame}
+		\begin{frame}
+			\frametitle{Method of Solution}
+			\begin{enumerate}
+				\item Reduced system (opposing spin coupling)
+				\item Average/const. off-diagonal matrix elements
+				\item Diagonal/self-energies omitted
+			\end{enumerate}
+		\end{frame}
+		\begin{frame}
+			\frametitle{Classical Analogy}
+			\begin{figure}
+				\centering
+				\animategraphics[every=3,loop,autoplay,width=\linewidth]{12}{images/bcsanim/bcs-}{40}{391}
+				\caption{\textcolor{gray}{\cite{bcs_anim}}}
+			\end{figure}
+		%NOTE THAT BCS theory is a quantum phenomenon - the physical pairing thing isn't really accurate. the interaction probability amplitudes mean the interactions between phonons and electrons is non-deterministic
+		\end{frame}
+		
+		\section{Conclusions}
+		\begin{frame}
+			\frametitle{Conclusions}
+			\begin{multicols}{2}
+				\begin{itemize}
+					\item Electrons of unlike spins pair through phonons, $ \rightarrow$ long-range correlation 
+					%unlike spins pair bc reduces interaction energy
+					\item All "hints" reproduced
+					\item Strong experimental agreement 
+				\end{itemize}
+				\columnbreak
+				\begin{figure}
+					\centering
+					\includegraphics[width=\linewidth]{images/specific_temp_agreement}
+					\label{fig:specifictempagreement}
+				\end{figure}
+			\end{multicols}
+			
+		\centering Questions?
+		\end{frame}
+	\backupbegin
+	
+	\appendix
+	\section{References}
+	\begin{frame}
+		\frametitle{References} \tiny
+		\bibliographystyle{plain}
+		\bibliography{citations}
+	\end{frame}
+	\section{Appendix}
+		\begin{frame}
+			\frametitle{Type-I/Type-II?}
+			\begin{multicols}{2}
+				\begin{itemize}
+					\item Type-I: pure metals, homogeneous SC state, no $ b $ region.
+					\item Type-II: alloys, inhomogeneous SC state (vortices), all 3 regions.
+				\end{itemize}
+				\columnbreak
+				\begin{figure}
+					\centering
+					\includegraphics[width=1.2\linewidth]{images/types}
+					\caption{\textcolor{gray}{\tiny F. Bouquet and J. Bobroff, CC BY-SA 4.0, via Wikimedia Commons}}
+					\label{fig:types}
+				\end{figure}
+			\end{multicols}
+		\end{frame}
+		\begin{frame}
+			\frametitle{Vortices?}
+			\begin{figure}
+				\centering
+				\includegraphics[width=1\linewidth]{images/svort}
+				\caption{}
+				\label{fig:svort}
+			\end{figure}\vspace{-20pt}
+		Minimization of free energy leads to inhomogeneous structure: normal "cores" surrounded by circulating supercurrents. \tiny \textcolor{gray}{hyperphysics.phy-astr.gsu.edu/hbase/Solids/scbc.html}
+		\end{frame}
+	
+		\begin{frame}
+			\frametitle{London Equations}
+			Constitutive equations between fields and currents in SCs. \cite{london}
+			\begin{align*}
+				\frac{ \partial \vec{j}}{ \partial t} &= -\frac{n_{s}e^2}{m} \vec{E} \\
+				\nabla \times \vec{j} &= - \frac{n_{s}e^2}{m}\vec{B}
+			\end{align*}
+		\begin{multicols}{2}
+			\begin{itemize}
+				\small
+				\item $ \vec{j} $ SC current density
+				\item $ \vec{E} $ electric field
+				\item $ \vec{B} $ magnetic field
+				\item $ e $ charge of electron
+				\item $ m $ electron mass
+				\item $ n_{s} $ phenomenological constant $ \propto $ number density of superconductive charge carriers.
+			\end{itemize}
+		\end{multicols}
+	%Models Meissner effect, critical temperature, and critical field.
+		\end{frame}
+	  \begin{frame}
+	    \frametitle{Ginzburg-Landau Theory}
+	    \begin{itemize}
+	    	\item Minimizing free energy $ \rightarrow $ all known phenomena (Meissner effect, London penetration depth) \cite{ginz_land}
+	    	\item Additionally predicted "inhomogeneous-state" SCs: vortices and Type-II SCs!
+	    \end{itemize}
+	    \vspace{20pt}
+	    \[ 
+	    \underbrace{F}_{\substack{\text{\tiny free}\\ \text{\tiny energy}}} = \underbrace{F_{n}}_{\substack{\text{\tiny normal state}\\ \text{\tiny free energy}}} + \underbrace{\alpha |\psi|^2 + \frac{\beta}{2}|\psi|^{4}}_{\text{\tiny Taylor expansion}} + \underbrace{\frac{1}{2m}|(-i\hbar\nabla -2e \vec{A})\psi|^2}_{\text{\tiny magnetization energy}} + \underbrace{\frac{|\vec{B}|^2}{2 \mu_{0}}}_{\substack{\text{\tiny magnetic}\\ \text{\tiny field energy}}}
+	    \]
+	  \end{frame}
+	\backupend
+
+\end{document}
